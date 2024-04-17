@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:20.04
 
 ARG NODE_GITBRANCH=release-1.5.5
 ARG CLIENT_GITBRANCH=release-2.0.0
@@ -44,7 +44,7 @@ RUN ./clean-build-artifacts.sh
 ## (2) copy binaries built in first stage.
 ## (3) add scripts and predefined accounts.
 ##
-FROM ubuntu:focal
+FROM ubuntu:20.04
 
 RUN apt-get update \
       && apt-get install -y sudo curl git ca-certificates jq supervisor lsof python3-pip \
